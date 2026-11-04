@@ -26,8 +26,16 @@ setInterval(tick, 10000);
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// the haze leans gently toward the cursor
 const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// the sky holds still for anyone who asks for less motion
+const sky = document.querySelector(".hero__video");
+if (reduce && sky) {
+  sky.removeAttribute("autoplay");
+  sky.pause();
+}
+
+// the haze leans gently toward the cursor
 const haze = document.querySelector(".haze");
 if (!reduce && haze) {
   let x = 0, y = 0, tx = 0, ty = 0;
