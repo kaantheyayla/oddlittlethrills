@@ -12,18 +12,6 @@ const io = new IntersectionObserver(
 );
 document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
-// local time in Prague, swiss-timetable style
-const clock = document.getElementById("clock");
-const tick = () => {
-  clock.textContent = new Date().toLocaleTimeString("en-GB", {
-    hour: "2-digit",
-    minute: "2-digit",
-    timeZone: "Europe/Prague",
-  });
-};
-tick();
-setInterval(tick, 10000);
-
 document.getElementById("year").textContent = new Date().getFullYear();
 
 const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
