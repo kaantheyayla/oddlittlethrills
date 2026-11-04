@@ -111,10 +111,9 @@ img { display: block; max-width: 100%; }
 
 .nav__mark {
   grid-column: 1 / 4;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  align-self: center;
 }
+.nav__mark img { height: 20px; width: auto; }
 
 .nav__links {
   grid-column: 7 / 13;
@@ -183,12 +182,12 @@ img { display: block; max-width: 100%; }
 .hero__title {
   grid-column: 1 / -1;
   grid-row: 3;
-  font-weight: 300;
-  font-size: clamp(48px, 9.4vw, 170px);
-  line-height: 0.9;
-  letter-spacing: -0.06em;
-  margin-left: -0.04em;
-  text-shadow: 0 0 50px rgba(13, 11, 10, 0.5);
+  margin: 0;
+}
+
+.hero__logo {
+  width: clamp(260px, 58vw, 980px);
+  height: auto;
 }
 
 .focus {
@@ -272,10 +271,9 @@ img { display: block; max-width: 100%; }
 .player iframe {
   display: block;
   width: 100%;
-  max-width: 700px; /* bandcamp's player tops out here */
-  height: 320px;
+  height: 352px;
   border: 0;
-  filter: grayscale(0.2);
+  border-radius: 12px;
 }
 
 .discog {
